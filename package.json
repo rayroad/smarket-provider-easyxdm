@@ -1,0 +1,35 @@
+{
+  "name": "smarket-provider-easyxdm",
+  "version": "0.0.1",
+  "description": "easyxdm WebAPI 接口访问模块",
+  "keywords": [],
+  "homepage": "",
+  "author": "dragon littlebeer@outlook.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smarketjs/smarket-provider-easyxdm"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "smarketProviderEasyXdm.js",
+    "dependencies": {
+      "arale-base": "1.2.0",
+      "jquery": "2.1.3",
+      "json": "0.0.2",
+      "smarket-provider": "0.0.8"
+    },
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    }
+  },
+  "devDependencies": {
+    "spm": "3"
+  },
+  "scripts": {
+    "test": "spm test",
+    "build": "spm build"
+  }
+}
