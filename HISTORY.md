@@ -2,6 +2,6 @@
 
 ---
 
-## 0.0.1
+## 0.0.0
 
-`new` It is the first version of smarket-provider-webapi.
+`new` It is the first version of smarket-provider-easyxdm.

@@ -1,37 +1,29 @@
 var expect = require('expect.js');
-var smarketProviderEasyXdm = require('../smarketProviderEasyXdm');
+var smarketProviderEasyxdm = require('../smarketProviderEasyXdm');
 
 describe('smarket-provider-easyxdm', function() {
-
-	it('normal usage', function() {
-		var myapi=new smarketProviderEasyXdm({'config':{
-			api:{
-  "baseUrl": "http://api.ievents.com.cn/api/"
-},
-			'cache':{'dataCache':'true'},
-			'log':{'isLog':'true','logType':'local'}
-		}});
-		var opts={
-			id : '2049',
-			widthl : '0',
-			widths : '151',
-			isNew : 'true',
-			allspeaker : 'true'
-		};
-		var res1=myapi.request("meeting",opts,success,erro);
-		console.log(res1);
-		myapi.request("meeting",opts,success);
-		myapi.request("meeting",opts);
-
-
-	});
-
+  it('normal usage', function() {
+    var myapi=new smarketProviderEasyxdm({
+        'cache':{'dataCache':'true'},
+        'api':{
+          "baseUrl": "http://api.kaihui.so/v1.39.4/api/",
+          "corsUrl": "http://api.kaihui.so/v1.39.4/cors/index.html"
+        },
+        'log':{'isLog':'true','logType':'local'}
+    });
+    var headers = {CustomerID: "3"}
+    var opts={eventId:64};
+    var res1=myapi.request("Agenda",headers,opts,success,erro);
+    console.log(res1);
+    myapi.request("Agenda",headers,opts,success);
+    myapi.request("Agenda",headers,opts);
+  });
 });
 
 function success(data){
-	console.log('success');
-}; 	
+  console.log('success');
+};
 
 function erro(data){
-	console.log('erro');
-}; 
+  console.log('erro');
+};
